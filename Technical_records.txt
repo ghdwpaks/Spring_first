@@ -1,0 +1,16 @@
+이 문서는 6c74ed50651e1284df0745c5d9de9dd69cc0085b 상태에서 추가적인 git commit 직전에 기록됐습니다.
+2022 01 31
+
+spring_first\spring_first_leg\src\main\webapp\WEB-INF\views
+이 위치에 있는 파일들 중 home.jsp 라는 파일을
+아파치 9 버전 서버로
+run as server 하면 서버가 돌아갑니다.
+
+spring_first\spring_first_leg\src\main\webapp\WEB-INF\views\home.jsp
+파일로 접근하려면 브라우저에
+http://localhost:7904/myapp/
+을 입력해서 들어가야합니다.
+
+
+
+

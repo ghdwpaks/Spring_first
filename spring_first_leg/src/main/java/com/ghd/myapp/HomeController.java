@@ -25,6 +25,7 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
+		System.out.println("루트 디렉터리에 접속을 시도하셨습니다.");
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
@@ -37,7 +38,7 @@ public class HomeController {
 		return "home";
 	}
 
-	@RequestMapping(value = "/ops", method = RequestMethod.GET)
+    @GetMapping("/ops")
 	public String ops(Locale locale, Model model) {
 		System.out.println("ops 에 접속을 시도하셨습니다.");
 		
@@ -51,7 +52,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "/ops/ops_main";
+		return "ops/ops_main";
 	}
 	
 }
