@@ -12,5 +12,20 @@ http://localhost:7904/myapp/
 을 입력해서 들어가야합니다.
 
 
+오류보고
+spring_first_leg\src\main\webapp\WEB-INF\views\ops\tui_editor.jsp
+에서 
+<input type="button" id="ghd" class="btn btn-dark" value="돌아가기"/>
+이 버튼을 통해 다시 메인페이지(spring_first_leg\src\main\webapp\WEB-INF\views\main.jsp)로 돌아가려고 하는데 실질적으로 리다이렉션을 하지 못하는 현상이 일어남
+
+여기서 더 혼란스러운점은
+메인 컨트롤러 자바 파일 (C:\workspace\spring\spring_first\spring_first_leg\src\main\java\com\ghd\myapp\HomeController.java) 에서 설정해놓은대로, 메인페이지로 돌아가려고 하면 '루트 디렉터리에 접속을 시도하셨습니다.'를 콘솔창에 출력되도록 해놨는데, 이 출력문이 출력되는데도 리다이렉션을 하지 못했다는 점이다.
 
 
+
+
+
+
+https://doolyit.tistory.com/20
+https://araikuma.tistory.com/640
+https://roqkffhwk.tistory.com/1
