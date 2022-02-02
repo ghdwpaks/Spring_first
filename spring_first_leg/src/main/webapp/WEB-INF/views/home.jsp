@@ -2,27 +2,30 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <html>
-<head>
-	<title>Home</title>
-	<%@include file ="./terminal/header.html" %>
-	<meta charset="utf-8">
 
-</head>
+	<head>
+		<title>Home</title>
+		
+		<meta charset="utf-8">
+	
+	</head>
+<%@include file ="./terminal/header.html" %>
 	<body>
 		<h1>
 			Hello world!  
 		</h1>
 	
 		<P>  The time on the server is ${serverTime}. </P>
-		<a href="ops">move to ops</a>
+		<a href="ops">move to ops</a><br>
+		<a href="tui">move to tui</a>
 		<br>
 		<br>
 		<form action="">
             choose file : <input type="file"/><br><br>    
             choose img file(multiple) : <input type="file" accept="image/*" multiple/><br><br>
             <input type="search" />
-            <input type="submit" value="검색"/>
-            <input type="reset" value="다시 입력"/>
+            <input type="submit" value="search"/>
+            <input type="reset" value="clear"/>
         </form>
         <br>
         <br>

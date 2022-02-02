@@ -55,4 +55,21 @@ public class HomeController {
 		return "ops/ops_main";
 	}
 	
+    @GetMapping("/tui")
+	public String tui(Locale locale, Model model) {
+		System.out.println("tui 에 접속을 시도하셨습니다.");
+		
+		
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "ops/tui_editor";
+	}
+	
 }
