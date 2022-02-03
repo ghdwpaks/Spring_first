@@ -10,8 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 /**
  * Handles requests for the application home page.
  */
@@ -71,5 +73,53 @@ public class HomeController {
 		
 		return "ops/tui_editor";
 	}
+    
+    @GetMapping("/tui_edit")
+	public String tui_edit(Locale locale, Model model) {
+		System.out.println("tui edit 에 접속을 시도하셨습니다.");
+		
+		
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "main";
+	}
+    
+    @GetMapping("/ajax")
+	public String ajax(Locale locale, Model model) {
+		System.out.println("ajax 에 접속을 시도하셨습니다.");
+		
+		
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "ops/ajax_test";
+	}
+    
+    @ResponseBody
+    @PostMapping("/ajaxedit")
+	public String ajax_edit(@RequestParam(value="params") String member) {
+		System.out.println("ajax edit 에 접속을 시도하셨습니다.");
+		System.out.println("Member : "+member);
+		
+		
+		
+		return "home";
+	}
+    
+    
+    
 	
 }

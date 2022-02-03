@@ -17,7 +17,8 @@
 	
 		<P>  The time on the server is ${serverTime}. </P>
 		<a href="ops">move to ops</a><br>
-		<a href="tui">move to tui</a>
+		<a href="tui">move to tui</a><br>
+		<a href="ajax">move to ajax</a>
 		<br>
 		<br>
 		<form action="">
