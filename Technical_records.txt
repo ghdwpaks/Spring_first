@@ -22,6 +22,26 @@ spring_first_leg\src\main\webapp\WEB-INF\views\ops\tui_editor.jsp
 메인 컨트롤러 자바 파일 (C:\workspace\spring\spring_first\spring_first_leg\src\main\java\com\ghd\myapp\HomeController.java) 에서 설정해놓은대로, 메인페이지로 돌아가려고 하면 '루트 디렉터리에 접속을 시도하셨습니다.'를 콘솔창에 출력되도록 해놨는데, 이 출력문이 출력되는데도 리다이렉션을 하지 못했다는 점이다.
 
 
+오류보고
+spring_first_leg\src\main\webapp\WEB-INF\views\ops\ajax_text.jsp
+에서 버튼을 눌러서 POST 로 접근하는것은 실패했지만
+
+https://hongku.tistory.com/119 으로부터 얻은 아이디어로
+ajax_text.jsp 안에 들어가있는 ajax 부분을 GET 방식으로 바꾼 결과
+버튼으로는 정상작동 하지 않지만
+
+http://localhost:7904/ajaxedit?params=params
+이 주소로 접속을 시도하면 정상적으로 작동하는 모습을 볼 수 있다.
+
+
+시스템 로그는 다음과 같이 출력됐다.
+'
+ajax edit 에 접속을 시도하셨습니다.
+Member : params
+00:46:50.739 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*]
+00:46:50.739 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing ["home"]
+00:46:50.750 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+'
 
 
 

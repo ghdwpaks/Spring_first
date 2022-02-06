@@ -109,7 +109,7 @@ public class HomeController {
 	}
     
     @ResponseBody
-    @PostMapping("/ajaxedit")
+    @GetMapping("/ajaxedit")
 	public String ajax_edit(@RequestParam(value="params") String member) {
 		System.out.println("ajax edit 에 접속을 시도하셨습니다.");
 		System.out.println("Member : "+member);

@@ -9,11 +9,14 @@
 	<%@include file ="../terminal/header.html" %>
 	<body>
 		<h1>ajax test page here</h1>
-		<h2>welcome! 34</h2>
+		<h2>welcome! 45</h2>
 		
+		<!-- 
 		<input type="text" id="name"  placeholder="이름"/><br><br>
 		<input type="text" id="gender" placeholder="성별"/><br><br>
 		<input type="text" id="age"  placeholder="나이"/><br><br>
+		 -->
+		
 		<input type="button" id="ghd" value="제출" class="btn btn-success"/>
 		
 		
@@ -33,11 +36,11 @@
 			
 			
 			$.ajax({
-			    type:"POST",
+			    type:"GET",
 			    url:"ajaxedit",
-			    data:JSON.stringify(params),
+			    data: params,
 			    dataType:'json',
-			    contentType:"application/json; UTF-8;",
+			    contentType:"application/json",
 			    success : function(data){
 			    	alert("얼럿 3 !");
 			        alert(JSON.stringify(data))
