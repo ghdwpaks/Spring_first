@@ -54,3 +54,11 @@ https://mand2.github.io/spring/rest-api/415-error-of-put/ 발췌
 https://doolyit.tistory.com/20
 https://araikuma.tistory.com/640
 https://roqkffhwk.tistory.com/1
+
+
+success : function(data){
+alert(data);
+                },
+                error : function(XMLHttpRequest, textStatus, errorThrown){
+                    alert("통신 실패.")
+                }

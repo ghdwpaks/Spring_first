@@ -11,7 +11,7 @@
 	<%@include file ="../terminal/header.html" %>
 	<body>
 		<h1>ajax test page here</h1>
-		<h2>welcome! 85</h2>
+		<h2>welcome! 92</h2>
 
 		<!-- 
 		<input type="text" id="name"  placeholder="이름"/><br><br>
@@ -33,54 +33,32 @@
 </html>
 <script>
 	$(document).ready(() => {
-	    const Editor = toastui.Editor;
-		const editor = new Editor({
-            el: document.querySelector('#editor'),
-            initialEditType: 'wysiwyg',
-            previewStyle: 'vertical',
-            height: '800px',
-            usageStatistics: false,
-            exts: ['colorSyntax'],
-            language: 'ko_KR',
-            placeholder: '여기에 내용을 입력해주세요.'
-        });
-	    editor.getMarkdown();
 		
 	    console.log("log1")
-	    console.log("log2")
 	    
 		$('#ghd').click(() => {
 			alert("얼럿 1 !");
-			console.log(this.editor.getHtml);
 			console.log("log3")
-			let content = this.editor.getHtml
-			console.log("log4")
-			
-			alert("content : "+content)
-            let data = {
-                'content': content
-            }
-			alert("data : "+data)
-			
 			$.ajax({
 			    type:"POST",
 			    url:"ajaxedit_post",
-			    data: data,
+			    data: {name:'ghdwpaks'},
 			    contentType:"application/json",
-			    dataType:"json"
-			}).done((data)=> {
-				alert("얼럿 3 !");
-				alert(JSON.stringify(data))
-			}).fail((error)=> {
-				alert("얼럿 4 !");
-				alert("error :"+error);
-				alert(JSON.stringify(error));
-			})
-			
-			
-			alert("data : "+data);
+			    dataType:"text",
+		    	success : function(data){
+		    		alert("통신 성공"+data);
+	               },
+	            error : function(XMLHttpRequest, textStatus, errorThrown){
+	                alert("통신 실패.")
+	                console.log("XMLHttpRequest :"+XMLHttpRequest)
+	                console.log("textStatus :"+textStatus)
+	                console.log("errorThrown :"+errorThrown)
+	                alert("마침")
+	            }
+			});
 			alert("얼럿 2");
 		});
+	    
 		
 	});
 </script>
