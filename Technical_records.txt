@@ -51,6 +51,19 @@ https://mand2.github.io/spring/rest-api/415-error-of-put/ 발췌
 
 
 
+이번에는 메인 컨트롤러 자바 파일(C:\workspace\spring\spring_first\spring_first_leg\src\main\java\com\ghd\myapp\HomeController.java)로부터 결과값을 가져오는데에 성공했다.
+이렇게 URL 을 가져와서 window.location = "/" 같은 식으로 사용하면 될거같다.
+아직도 해결되지 않은 문제는 ajax_edit 의 script 단에서 spring 의 자바 파일 단으로 데이터를 넘기는것이다.
+ajax_edit.jsp 을 열어서 초록색 버튼을 눌러보면 프론트단에서는 딱히 문제없이 작동하지만, 서버 콘솔단에서는 name 변수에 null 값이 들어가는것을 볼 수 있다.
+
+
+
+
+
+
+
 https://doolyit.tistory.com/20
 https://araikuma.tistory.com/640
 https://roqkffhwk.tistory.com/1
+
+

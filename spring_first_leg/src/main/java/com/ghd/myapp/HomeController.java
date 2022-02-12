@@ -140,12 +140,12 @@ public class HomeController {
     
     
     @PostMapping("/ajaxedit_post")
-	public @ResponseBody String ajax_edit_post(tui user) {
+	public @ResponseBody String ajax_edit_post(Home_sam user) {
 		System.out.println("ajax edit post 에 접속을 시도하셨습니다.");
 		System.out.println("Member : "+user);
 		
 		
-		return "home";
+		return "ops/ajax_test";
 	}
     
 	
