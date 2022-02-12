@@ -11,7 +11,7 @@
 	</head>
 	<%@include file ="../terminal/header.html" %>
 	<body>
-		<h1>welcome! 13</h1>
+		<h1>welcome! 14</h1>
 		<h2>tui test file</h2>
 		<hr>
 		
@@ -40,9 +40,7 @@
 		$("#ghd").click(function(){
 			
 			alert("메인페이지로 돌아가는 버튼을 누르셨습니다!")
-			$.ajax({ type: "GET",
-				url: "/myapp" });
-
+            window.location = "/myapp"
 		});
 		$('#submit').click(function(){
 			alert("submit 실행됨")

@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 /**
  * Handles requests for the application home page.
  */
@@ -91,6 +93,23 @@ public class HomeController {
 		return "main";
 	}
     
+    @GetMapping("/tui_min")
+	public String tui_min(Locale locale, Model model) {
+		System.out.println("tui min 에 접속을 시도하셨습니다.");
+		
+		
+		logger.info("Welcome home! The client locale is {}.", locale);
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "ops/tui_min";
+	}
+    
     @GetMapping("/ajax")
 	public String ajax(Locale locale, Model model) {
 		System.out.println("ajax 에 접속을 시도하셨습니다.");
@@ -112,7 +131,7 @@ public class HomeController {
     @GetMapping("/ajaxedit")
 	public String ajax_edit(@RequestParam(value="params") String member) {
 		System.out.println("ajax edit 에 접속을 시도하셨습니다.");
-		System.out.println("Member : "+member);
+		System.out.println("Member = "+member);
 		
 		
 		
@@ -120,6 +139,14 @@ public class HomeController {
 	}
     
     
+    @PostMapping("/ajaxedit_post")
+	public @ResponseBody String ajax_edit_post(tui user) {
+		System.out.println("ajax edit post 에 접속을 시도하셨습니다.");
+		System.out.println("Member : "+user);
+		
+		
+		return "home";
+	}
     
 	
 }

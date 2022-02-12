@@ -5,6 +5,9 @@
 
 	<head>
 		<title>Home</title>
+		<script src="resources/script_ghd.js"></script>
+		<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"/>
+        <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
 		
 		<meta charset="utf-8">
 	
@@ -12,12 +15,13 @@
 <%@include file ="./terminal/header.html" %>
 	<body>
 		<h1>
-			Hello world!  
+			Hello world!  10
 		</h1>
 	
 		<P>  The time on the server is ${serverTime}. </P>
 		<a href="ops">move to ops</a><br>
 		<a href="tui">move to tui</a><br>
+		<input type="button" id="tui_min" class="btn btn-info" value="tui min"/><br><br>
 		<a href="ajax">move to ajax</a>
 		<br>
 		<br>
@@ -43,3 +47,10 @@
 	</body>
 </html>
 <%@include file ="./terminal/footer.html" %>
+<script>
+	$("#tui_min").click(function(){
+		
+		
+	    window.location = "tui_min"
+	});
+</script>
