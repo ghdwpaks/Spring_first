@@ -39,15 +39,17 @@
 		$('#ghd').click(() => {
 			alert("얼럿 1 !");
 			console.log("log3")
+			var sending_data = {name:"ghdwpaks"}
 			$.ajax({
 			    type:"POST",
-			    url:"ajaxedit_post",
-			    data: {name:'ghdwpaks'},
-			    contentType:"application/json",
+			    url:"AajxEditPost",
+			    data: "ghdwpaksghdwpaks",
+			    contentType: "application/json; charset=utf-8",
 			    dataType:"text",
 		    	success : function(data){
 		    		alert("통신 성공"+data);
-	               },
+		    		window.location = data
+	            },
 	            error : function(XMLHttpRequest, textStatus, errorThrown){
 	                alert("통신 실패.")
 	                console.log("XMLHttpRequest :"+XMLHttpRequest)

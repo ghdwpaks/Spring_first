@@ -1,6 +1,10 @@
 이 문서는 6c74ed50651e1284df0745c5d9de9dd69cc0085b 상태에서 추가적인 git commit 직전에 기록됐습니다.
 2022 01 31
 
+자바 컨벤션에 따라 작성하는것을 희망한다.
+https://naver.github.io/hackday-conventions-java/#naming
+https://velog.io/@kwj1270/JAVA-%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98#methods
+
 spring_first\spring_first_leg\src\main\webapp\WEB-INF\views
 이 위치에 있는 파일들 중 home.jsp 라는 파일을
 아파치 9 버전 서버로
@@ -43,20 +47,8 @@ Member : params
 00:46:50.750 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
 '
 
-
-계속해서 Completed 415 UNSUPPORTED_MEDIA_TYPE 에러가 발생한다면
-@RequestBody 또는 @ResponseBody 쪽에서 문제가 생겼을 수 있다.
-이러한 경우에는 위에 서술한 두 어노테이션을 각각 지워보면서 실행을 시켜보는게 좋다.
-https://mand2.github.io/spring/rest-api/415-error-of-put/ 발췌
-
-
-
-이번에는 메인 컨트롤러 자바 파일(C:\workspace\spring\spring_first\spring_first_leg\src\main\java\com\ghd\myapp\HomeController.java)로부터 결과값을 가져오는데에 성공했다.
-이렇게 URL 을 가져와서 window.location = "/" 같은 식으로 사용하면 될거같다.
-아직도 해결되지 않은 문제는 ajax_edit 의 script 단에서 spring 의 자바 파일 단으로 데이터를 넘기는것이다.
-ajax_edit.jsp 을 열어서 초록색 버튼을 눌러보면 프론트단에서는 딱히 문제없이 작동하지만, 서버 콘솔단에서는 name 변수에 null 값이 들어가는것을 볼 수 있다.
-
-
+ajax_edit으로부터 보낸 신호가 HomeController.java 까지 도달해서 "Member : ghdwpaksghdwpaks" 구문을 출력하는것을 볼 수 있다.
+오류가 해결됐다.
 
 
 
@@ -67,3 +59,9 @@ https://araikuma.tistory.com/640
 https://roqkffhwk.tistory.com/1
 
 
+success : function(data){
+alert(data);
+                },
+                error : function(XMLHttpRequest, textStatus, errorThrown){
+                    alert("통신 실패.")
+                }

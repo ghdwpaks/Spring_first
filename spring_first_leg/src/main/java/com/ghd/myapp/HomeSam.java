@@ -3,7 +3,8 @@ package com.ghd.myapp;
 import javax.persistence.Entity;
 
 @Entity
-public class Home_sam {
+public class HomeSam {
+	
 	private String name;
 
 	public String getName() {
@@ -16,8 +17,10 @@ public class Home_sam {
 
 	@Override
 	public String toString() {
-		return "Home_sam [name=" + name + "]";
+		return "HomeSam [name=" + name + "]";
 	}
+
+	
 	
 	
 	
