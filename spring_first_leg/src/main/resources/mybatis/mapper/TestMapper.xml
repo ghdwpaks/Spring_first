@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="com.ghd.myapp.model.aws.dao.TestMapper">
+	<select id="getAllDataList" resultType="com.ghd.myuapp.aws.dto.portfolio">
+		SELECT * FROM portfolio;
+	</select>
+</mapper>

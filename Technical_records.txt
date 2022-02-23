@@ -1,55 +1,236 @@
 이 문서는 6c74ed50651e1284df0745c5d9de9dd69cc0085b 상태에서 추가적인 git commit 직전에 기록됐습니다.
 2022 01 31
 
+Give up maintenance for Spring Fist Legacy code and logic.
+Spring fisrt Legacy 코드 및 로직에 대한 유지보수를 포기합니다.
+
+아래와 같은 사유를 이유로 들어 결정합니다.
+
+1. 불가능한 유지보수
+유지보수가 몇일동안 전혀 진행되지 않았습니다.
+Spring 으로 이루어진 백엔드 단을 이용한 View 단과 DB 단을 통신하는 기능을 전혀 적용하지 못했습니다.
+현재까지 어느정도 진도가 나왔는지도 파악하지 못했습니다.
+
+2. 불확실한 결과에 대한
+이렇게 완성한 코드에다가 새로운 기능을 추가할때 또 이러한 (개발 기간이 아주 늘어지는) 상황이 발생할 수 있습니다.
+
+3. 새로운 변화
+다른 강좌를 보고서 세운 코드들을 기존의 Spring fisrt Leg(acy) 코드와 결합하면 저만의 코드 형식이 나올 수 있습니다.
+특색을 가짐뿐만 아니라 다른 변화에도 더 쉽게 적응할 수 있게 될것입니다.
+
+4. 남은 기록
+유지보수를 포기하는것이지 Spring 프레임워크에 대한 학습을 멈춘다는 뜻이 아닙니다.
+
+이 결정을 도와준 자료들의 URL입니다.
+
+오류해결문서(Initialization of bean failed) : https://xzio.tistory.com/1371
+sql 정렬출력 : https://gomguard.tistory.com/93
+스키마의 개념 : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=pcy8888&logNo=220566428160
+자바의 final 키워드 : https://imasoftwareengineer.tistory.com/80
+오류해결문서(BeanCreationException) : https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=allkanet72&logNo=220922655922
+오류해결문서(BeanCreationException) : https://ceaserdev.tistory.com/entry/Spring-BeanCreationException-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95
+오류토론문서(NoSuchBeanDefinitionException) : https://stackoverflow.com/questions/48245488/nosuchbeandefinition-exception
+오류토론문서(editor.getvalue): https://stackoverflow.com/questions/48912553/codemirror-uncaught-typeerror-editor-getvalue-is-not-a-function
+엔티티와 매핑 어노테이션 설명 문서 : https://data-make.tistory.com/610
+오류해결문서 (servlet-context.xml) : https://chldnals.tistory.com/14
+오류해결문서 (톰캣 ExecutionException) : https://dalili.tistory.com/13
+오류토론문서 (Initialization of bean failed) : https://stackoverflow.com/questions/26367159/initialization-of-bean-failed-nested-exception-is-org-springframework-beans
+오류해결문서 (The fully qualified name of the bean's) : https://rimkongs.tistory.com/301
+JPA 어노테이션 설명 문서 : https://velog.io/@leyuri/Spring-boot-JPA-%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98-Entity-Table-Column-Id-Lombok
+SQL DDL, DML, DCL 설명 문서: https://e2xist.tistory.com/27
+SQL 키 설명 문서 : https://runtoyourdream.tistory.com/129
+오류해결문서 (java.lang.ClassNotFoundException) : https://s00741.tistory.com/entry/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%97%90%EB%9F%AC-javalangClassNotFoundException-orgspringframeworkwebcontextContextLoaderListener
+스키마 설명문서 : https://velog.io/@ash3767/%EC%8A%A4%ED%82%A4%EB%A7%88%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80
+스키마 설명문서 : https://jwprogramming.tistory.com/47
+오류해결문서 (The fully qualified name of the bean's) : https://blair6383.tistory.com/255
+오류해결문서 (java.lang.ClassNotFoundException) : https://earth-ing.tistory.com/25
+오류토론문서 (java.lang.ClassNotFoundException) : https://stackoverflow.com/questions/31266099/the-fully-qualified-name-of-the-beans-class-except-if-it-serves-only-as-a-pare
+maven 온라인 저장소 : https://mvnrepository.com/
+부트스트랩의 타일즈 적용문서 : https://mr-dan.tistory.com/13?category=694823
+Spring 매핑 어노테이션 정리 : https://deveric.tistory.com/54
+토스트 UI 에디터 사용기 : https://codingnojam.tistory.com/3
+Mybatis가 포함된 Spring 과 DB 연결하는 문서  : https://stajun.tistory.com/entry/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC4-DB-%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0MyBatis
+자바 final 상수 설명 문서 : https://jdpb.tistory.com/entry/Java-final-%EC%83%81%EC%88%98
+오류해결문서(BeanCreationException) : https://mkil.tistory.com/415
+Mybatis가 포함된 Spring 과 DB 연결하는 문서 : https://min-it.tistory.com/5
+DB 명령어 예제 : https://limjunho.github.io/2021/08/11/spring-mysql.html
+Mybatis가 포함된 Spring 과 DB 연결하는 문서 : https://jjeongil.tistory.com/1322 
+오류토론문서(BeanCreationException) : https://okky.kr/article/534694
+DB 스키마와 테이블 만들기 : https://m.blog.naver.com/tipsware/221304314735
+Spring DB DAO, DTO, VO : https://limjunho.github.io/2021/07/30/JAVA-DAO-DTO-VO.html
+오류해결문서(NoSuchBeanDefinitionException) : https://www.baeldung.com/spring-nosuchbeandefinitionexception
+오류해결문서(ExecutionException) : https://gabrielyj.tistory.com/145
+오류해결문서(ExecutionException) : https://semicolon-dev.tistory.com/7
+스키마 설명 문서 : https://coding-factory.tistory.com/216
+
+
 자바 컨벤션에 따라 작성하는것을 희망한다.
 https://naver.github.io/hackday-conventions-java/#naming
 https://velog.io/@kwj1270/JAVA-%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98#methods
 
-spring_first\spring_first_leg\src\main\webapp\WEB-INF\views
-이 위치에 있는 파일들 중 home.jsp 라는 파일을
-아파치 9 버전 서버로
-run as server 하면 서버가 돌아갑니다.
+데이터베이스 스키마에 대한 지식이 더 필요하거나 Spring과 연계되어 사용해야할때는 아래의 문서가 도움이 될것이다.
+https://m.blog.naver.com/tipsware/221304314735
 
-spring_first\spring_first_leg\src\main\webapp\WEB-INF\views\home.jsp
-파일로 접근하려면 브라우저에
-http://localhost:7904/myapp/
-을 입력해서 들어가야합니다.
+Navigator 탭에 Schemas 창의 SCHEMAS 안에 ghd 이라는 스키마(없으면 만들기)안에 Tables 안에 content 우클릭하고 나오는것들중에 'Send to SQL Editor' 누르면 각종 버튼들이 나온다.
+Select All , Insert , Update , Delete, Create 기능을 수행하는 코드들을 출력 또는 자동완성 해준다.
+ 
+
+아래의 구문은 데이터베이스 스키마의 생성 시에 쓰였던 각종 코드들에 대한 정보이다.
+    CREATE SCHEMA `tips_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
+
+    CREATE TABLE `tips_db`.`friends` (
+    `name` VARCHAR(10) NOT NULL,
+    `phone` VARCHAR(16) NULL,
+    `age` INT NULL)
+    ENGINE = InnoDB
+    DEFAULT CHARACTER SET = utf8
+    COLLATE = utf8_bin;
+
+
+    CREATE SCHEMA `ghd` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
+
+    CREATE TABLE `ghd`.`content` (
+    `contentid` INT NOT NULL AUTO_INCREMENT,
+    `writerid` INT NOT NULL,
+    `content` VARCHAR(100) NULL,
+    PRIMARY KEY (`contentid`))
+    ENGINE = InnoDB
+    DEFAULT CHARACTER SET = utf8
+    COLLATE = utf8_bin;
+
+    INSERT INTO `ghd`.`content`
+    (`contentid`,
+    `writerid`,
+    `content`)
+    VALUES
+    (<{contentid: }>,
+    <{writerid: }>,
+    <{content: }>);
+
+바람직한 삽입(insert) 방법
+    이번에 만든 스키마에서는 A(uto)I(ncrement)와 N(not)N(ull) 기능이 들어가있어서 '비울 수 없으며, 자동으로 채워지는'곳이라서 아래 명령어 구문과 같이 입력하는게 바람직해보인다.
+    INSERT INTO `ghd`.`content`
+    (`writerid`,
+    `content`)
+    VALUES
+    (1,"hello ghdwpaks.");
+
+컬럼 출력
+    이 구문은 출력하는 구문이다. select * from ghd과 별 다를 바 없지만, 어디서든 쓸 수 있다는 점에서 의미가 있다.
+    SELECT `content`.`contentid`,
+    `content`.`writerid`,
+    `content`.`content`
+    FROM `ghd`.`content`;
+
+테이블 이름 혼용 방지
+    테이블 이름이 content 인데도 그 내부에 있는 컬럼들 이름중에 content 가 있었기 때문에, 테이블 이름은 contenttable 로 변경(alert) 했음을 미리 알립니다.
+
+DTO 와 DB 유격 메꾸기
+    이들은 데이터베이스 워크벤치 안에 있는 DB 안에 있는 TABLE 안에 있는 컬럼값들의 이름을 맞춰준다고 해서 전부 연결되는것은 아닌거같다.
+    이곳에 spring 의 DTO (또는 contoller) 단과 연결시킬 수 있는 어노테이션들을 모아놓은 링크와
+    https://deveric.tistory.com/54
+    실제로 실습해놓은 코드가 있으니
+    https://data-make.tistory.com/610
+    도움이 되길 바란다.
+
+
+
+
+Spring 설정 정보를 properties로 분리해놓는 방법
+(*https://www.kurien.net/post/view/37 으로부터 발췌)
+    이는 mybatis-config.xml(spring_first\spring_first_leg\src\main\resources\mybatis-config.xml) 와 jdbc.properties (spring_first\spring_first_leg\src\main\resources\jdbc.properties) 에 대한 상호 연관성에 관한 문단입니다.
+    jdbc.properties 에서는 
+    'jdbc.driverClassName=com.mysql.jdbc.Driver
+
+    jdbc.url=jdbc:mysql://localhost:3306/spring_web_project
+    jdbc.username=root
+    jdbc.password=ghdwpaks' 이렇게만 입력했습니다.
+    mybatis-config.xml 파일에서 사용할때는 ${jdbc.url} ,${jdbc.username},${jdbc.password},${jdbc.driverClassName} 등등으로써 사용할 수 있게 됩니다.
+
+    당연한 이야기겠지만 상수(또는 추후에 값이 변화하지 않는 변수)로써 이러한 정보들을 사용하는것보다 훨씬 간단하고, 관리하기 쉬운 형태로써 존재하기 때문에 유지보수에 큰 도움이 될 수 있을것입니다. (ex : DB 비번을 업데이트 했을 경우)
+
+
+
+
+
+서버 실행 방법
+    spring_first\spring_first_leg\src\main\webapp\WEB-INF\views
+    이 위치에 있는 파일들 중 home.jsp 라는 파일을
+    아파치 9 버전 서버로
+    run as server 하면 서버가 돌아갑니다.
+
+    spring_first\spring_first_leg\src\main\webapp\WEB-INF\views\home.jsp
+    파일로 접근하려면 브라우저에
+    http://localhost:7904/myapp/
+    을 입력해서 들어가야합니다.
 
 
 오류보고
-spring_first_leg\src\main\webapp\WEB-INF\views\ops\tui_editor.jsp
-에서 
-<input type="button" id="ghd" class="btn btn-dark" value="돌아가기"/>
-이 버튼을 통해 다시 메인페이지(spring_first_leg\src\main\webapp\WEB-INF\views\main.jsp)로 돌아가려고 하는데 실질적으로 리다이렉션을 하지 못하는 현상이 일어남
+    spring_first_leg\src\main\webapp\WEB-INF\views\ops\tui_editor.jsp
+    에서 
+    <input type="button" id="ghd" class="btn btn-dark" value="돌아가기"/>
+    이 버튼을 통해 다시 메인페이지(spring_first_leg\src\main\webapp\WEB-INF\views\main.jsp)로 돌아가려고 하는데 실질적으로 리다이렉션을 하지 못하는 현상이 일어남
 
-여기서 더 혼란스러운점은
-메인 컨트롤러 자바 파일 (C:\workspace\spring\spring_first\spring_first_leg\src\main\java\com\ghd\myapp\HomeController.java) 에서 설정해놓은대로, 메인페이지로 돌아가려고 하면 '루트 디렉터리에 접속을 시도하셨습니다.'를 콘솔창에 출력되도록 해놨는데, 이 출력문이 출력되는데도 리다이렉션을 하지 못했다는 점이다.
+    여기서 더 혼란스러운점은
+    메인 컨트롤러 자바 파일 (C:\workspace\spring\spring_first\spring_first_leg\src\main\java\com\ghd\myapp\HomeController.java) 에서 설정해놓은대로, 메인페이지로 돌아가려고 하면 '루트 디렉터리에 접속을 시도하셨습니다.'를 콘솔창에 출력되도록 해놨는데, 이 출력문이 출력되는데도 리다이렉션을 하지 못했다는 점이다.
 
 
 오류보고
-spring_first_leg\src\main\webapp\WEB-INF\views\ops\ajax_text.jsp
-에서 버튼을 눌러서 POST 로 접근하는것은 실패했지만
+    spring_first_leg\src\main\webapp\WEB-INF\views\ops\ajax_text.jsp
+    에서 버튼을 눌러서 POST 로 접근하는것은 실패했지만
 
-https://hongku.tistory.com/119 으로부터 얻은 아이디어로
-ajax_text.jsp 안에 들어가있는 ajax 부분을 GET 방식으로 바꾼 결과
-버튼으로는 정상작동 하지 않지만
+    https://hongku.tistory.com/119 으로부터 얻은 아이디어로
+    ajax_text.jsp 안에 들어가있는 ajax 부분을 GET 방식으로 바꾼 결과
+    버튼으로는 정상작동 하지 않지만
 
-http://localhost:7904/ajaxedit?params=params
-이 주소로 접속을 시도하면 정상적으로 작동하는 모습을 볼 수 있다.
+    http://localhost:7904/ajaxedit?params=params
+    이 주소로 접속을 시도하면 정상적으로 작동하는 모습을 볼 수 있다.
 
 
-시스템 로그는 다음과 같이 출력됐다.
-'
-ajax edit 에 접속을 시도하셨습니다.
-Member : params
-00:46:50.739 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*]
-00:46:50.739 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing ["home"]
-00:46:50.750 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-'
+    시스템 로그는 다음과 같이 출력됐다.
+    '
+    ajax edit 에 접속을 시도하셨습니다.
+    Member : params
+    00:46:50.739 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [text/plain, */*]
+    00:46:50.739 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing ["home"]
+    00:46:50.750 [http-nio-7904-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+    '
 
-ajax_edit으로부터 보낸 신호가 HomeController.java 까지 도달해서 "Member : ghdwpaksghdwpaks" 구문을 출력하는것을 볼 수 있다.
-오류가 해결됐다.
+오류 해결 보고
+    ajax_edit으로부터 보낸 신호가 HomeController.java 까지 도달해서 "Member : ghdwpaksghdwpaks" 구문을 출력하는것을 볼 수 있다.
+    오류가 해결됐다.
 
+오류 (해결) 보고
+    org.springframework.beans.factory.BeanCreationException
+    이 에러가 발생했다. 첫번째 출력 결과물 전체는 아래와 같다.
+
+    org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Initialization of bean failed; nested exception is org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'java.lang.String' to required type 'javax.sql.DataSource' for property 'dataSource'; nested exception is java.lang.IllegalStateException: Cannot convert value of type 'java.lang.String' to required type 'javax.sql.DataSource' for property 'dataSource': no matching editors or conversion strategy found
+
+    https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=allkanet72&logNo=220922655922
+    으로부터 발췌.
+
+    jdk를 추가해줘서 이 문제를 해결했다.
+
+
+오류 보고
+    https://chldnals.tistory.com/14
+
+    root-context.xml (spring_first_leg\src\main\webapp\WEB-INF\spring\root-context.xml)
+    파일에 대해 오류가 발생해서 봤더니
+    32행(<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">) 과 38행(<bean id="testPageMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">) 에 대해서 아래와 같은 구문의 오류가 발생했다.
+
+    Attribute : class
+    The fully qualified name of the bean's class, except if it serves only as a parent definition for child bean 
+    definitions.
+
+    Data Type : string
+
+오류 보고
+    바로 위의 오류보고에서 서술된 32행과 38행 전체를 주석처리하고서 서버를 실행해봤더니
+    
+    org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController': Unsatisfied dependency expressed through field 'testpagemapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ghd.java.testPageMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+    
+    이러한 구문이 서버 콘솔에 출력되었습니다.
 
 
 
