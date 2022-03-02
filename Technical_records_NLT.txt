@@ -1,0 +1,30 @@
+hello world
+ 
+
+이 문서는 994b24bbcc631de3600b433ea95a4966fb42ca23 이후에 작성되었습니다.
+
+
+새롭게 시작하는 Spring Web MVC 완성 프로젝트는 
+뉴렉처(NewLecTure) 채널에 올라온 '스프링 프레임워크 강좌/강의 ALL' 목록에 있는
+'Spring MVC (스프링 웹 MVC) 강의' 시리즈를 실습하는 용도의 프로젝트인
+'webproject'의 기술문서입니다.
+
+
+https://www.youtube.com/watch?v=hjC9EQGNC0c&list=PLq8wAnVUcTFUHYMzoV2RoFoY2HDTKru3T&index=30 (*접속 불가하면 이 URL 로 https://www.youtube.com/watch?v=hjC9EQGNC0c)
+Spring MVC (스프링 웹 MVC) 강의 04 - Dispatcher Servlet 라이브러리 설정하기
+이 영상의 과정을 전부 마무리 하였습니다.
+
+
+오류보고
+    The superclass "jakarta.servlet.http.HttpServlet" was not found on the Java Build Path
+    https://computer-science-student.tistory.com/475
+    https://ghostitm.tistory.com/50
+
+    ▶ 프로젝트 > 우클릭 > Properties > Project Facets > Runtimes > New > Apache Tomcat vx.x > 설치되어 있을 경우(해당위치선택) / 설치되어 있지 않는 경우 (Download and Install) > Apply and Close
+
+
+
+
+
+
+

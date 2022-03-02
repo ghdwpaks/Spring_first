@@ -1,7 +1,7 @@
 이 문서는 6c74ed50651e1284df0745c5d9de9dd69cc0085b 상태에서 추가적인 git commit 직전에 기록됐습니다.
 2022 01 31
 
-Give up maintenance for Spring Fist Legacy code and logic.
+Give up maintenance for Spring Fist Legacy code and logic. (Technical_records.txt)
 Spring fisrt Legacy 코드 및 로직에 대한 유지보수를 포기합니다.
 
 아래와 같은 사유를 이유로 들어 결정합니다.
