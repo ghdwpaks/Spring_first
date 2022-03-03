@@ -7,6 +7,6 @@
 		<title>Home page</title>
 	</head>
 	<body>
-	 	<h1>Hello Jsp</h1>
+	 	<h1>Hi ${data}</h1>
 	</body>
 </html>

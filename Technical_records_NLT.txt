@@ -3,6 +3,7 @@ hello world
 
 이 문서는 994b24bbcc631de3600b433ea95a4966fb42ca23 이후에 작성되었습니다.
 
+'발생 시점' 은 해당 문단이 작성됐을 시기 바로 이전에 commit 된 것의 일련번호 입니다.
 
 새롭게 시작하는 Spring Web MVC 완성 프로젝트는 
 뉴렉처(NewLecTure) 채널에 올라온 '스프링 프레임워크 강좌/강의 ALL' 목록에 있는
@@ -15,16 +16,112 @@ Spring MVC (스프링 웹 MVC) 강의 04 - Dispatcher Servlet 라이브러리 �
 이 영상의 과정을 전부 마무리 하였습니다.
 
 
-오류보고
+오류 해결 보고
     The superclass "jakarta.servlet.http.HttpServlet" was not found on the Java Build Path
+    오류문이 떴을 경우 
+
     https://computer-science-student.tistory.com/475
     https://ghostitm.tistory.com/50
 
     ▶ 프로젝트 > 우클릭 > Properties > Project Facets > Runtimes > New > Apache Tomcat vx.x > 설치되어 있을 경우(해당위치선택) / 설치되어 있지 않는 경우 (Download and Install) > Apply and Close
 
 
+오류 해결 보고
+    webproject\src\main\webapp\WEB-INF\web.xml
+    에서 발생한 문제
+
+    https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=jeonginhwa&logNo=220616275401
 
 
 
 
+    2행 오류문
+    Multiple annotations found at this line:
+        - There are '16' errors in 'http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/
+        javaee/jsp_2_3.xsd'.
+        - There are '43' errors in 'http://xmlns.jcp.org/xml/ns/javaee/web-common_4_0.xsd'.
+        - There are '2' errors in 'http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/
+        javaee/javaee_7.xsd'.
 
+    5행 오류문
+    There are '6' errors in 'http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd'.
+
+    10행 오류문
+    cvc-id.3: A field of identity constraint 'web-common-servlet-name-uniqueness' matched 
+    element 'web-app', but this element does not have a simple type.
+
+    14행 오류문
+    Multiple annotations found at this line:
+        - cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://
+        xmlns.jcp.org/xml/ns/javaee":url-pattern}'. One of '{"http://xmlns.jcp.org/xml/ns/javaee":servlet-name}' 
+        is expected.
+        - Invalid element name:
+    - url-pattern
+
+    One of the following is expected:
+    - servlet-name
+
+    Error indicated by:
+    {http://xmlns.jcp.org/xml/ns/javaee}
+    with code:
+
+    16행 오류문
+    Invalid element name:
+    - display-name
+
+    One of the following is expected:
+    - module-name
+    - distributable
+    - context-param
+    - filter
+    - filter-mapping
+    - listener
+    - servlet
+    - servlet-mapping
+    - session-config
+    - mime-mapping
+    - welcome-file-list
+    - error-page
+    - jsp-config
+    - security-constraint
+    - login-config
+    - security-role
+    - message-destination
+    - locale-encoding-mapping-list
+    - default-context-path
+    - request-character-encoding
+    - response-character-encoding
+    - deny-uncovered-http-methods
+    - absolute-ordering
+
+    Error indicated by:
+    {http://xmlns.jcp.org/xml/ns/
+    javaee}
+    with code:
+
+오류보고
+    발생 시점 : 17f7ff1bb704f5705d6d53ac13c66830b8a63a6d
+
+    The blank final field testService may not have been initialized
+    오류가 발생했을때는
+    
+    @RequiredArgsConstructor
+    어노테이션을 붙혀줌으로써 해결할 수 있을것으로 보인다.
+
+오류보고
+    발생 시점 : 17f7ff1bb704f5705d6d53ac13c66830b8a63a6d
+
+    java.lang.IllegalArgumentException: [null]을(를) 타입 [java.lang.String](으)로 변환하는 중 오류 발생
+
+오류 보고
+    발생 시점 : 17f7ff1bb704f5705d6d53ac13c66830b8a63a6d
+
+    Caused by: java.lang.IllegalArgumentException: [null]을(를) 타입 [java.lang.String](으)로 변환하는 중 오류 발생
+
+오류보고
+    발생 시점 : 17f7ff1bb704f5705d6d53ac13c66830b8a63a6d
+    
+    SEVERE: [file:/C:/workspace/spring/spring_first/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/webproject/WEB-INF/web.xml]에 위치한 애플리케이션 web.xml 내에서 파싱 오류 발생
+
+    이 문서에서는 이 문제를 해결한 사람의 기록이 있다.
+    https://okky.kr/article/577728
